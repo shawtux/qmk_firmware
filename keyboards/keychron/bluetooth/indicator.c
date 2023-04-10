@@ -558,7 +558,7 @@ bool LED_INDICATORS_KB(void) {
    return false;
 }
 
-bool led_update_user(led_t led_state) {
+bool led_update_kb(led_t led_state) {
     if (!LED_DRIVER_IS_ENABLED()) {
 #    if defined(LED_MATRIX_DRIVER_SHUTDOWN_ENABLE) || defined(RGB_MATRIX_DRIVER_SHUTDOWN_ENABLE)
         LED_DRIVER.exit_shutdown();
