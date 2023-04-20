@@ -106,6 +106,7 @@ void indicator_stop(void);
 void indicator_eeconfig_reload(void);
 bool indicator_is_enabled(void);
 bool indicator_is_running(void);
+void os_state_indicate(void);
 
 #ifdef BAT_LOW_LED_PIN
 void indicator_battery_low_enable(bool enable);
