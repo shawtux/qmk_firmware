@@ -18,15 +18,15 @@
 
 #include "quantum.h"
 #ifdef VIA_ENABLE
-#include "via.h"
+#    include "via.h"
 #endif
 
 #define ___ KC_NO
 
 #ifdef VIA_ENABLE
-#define USER_START  USER00
+#    define USER_START QK_KB_0
 #else
-#define USER_START  SAFE_RANGE
+#    define USER_START SAFE_RANGE
 #endif
 
 // clang-format off
@@ -35,8 +35,6 @@ enum {
     KC_ROPTN,
     KC_LCMMD,
     KC_RCMMD,
-    KC_MCTL,
-    KC_LNPD,
     KC_TASK,
     KC_FILE,
     KC_SNAP,
@@ -46,7 +44,12 @@ enum {
     BT_HST1,
     BT_HST2,
     BT_HST3,
-#endif
     BAT_LVL,
-    NEW_SAFE_RANGE,
+#else
+    BT_HST1 = KC_TRNS,
+    BT_HST2 = KC_TRNS,
+    BT_HST3 = KC_TRNS,
+    BAT_LVL = KC_TRNS,
+#endif
+	NEW_SAFE_RANGE
 };

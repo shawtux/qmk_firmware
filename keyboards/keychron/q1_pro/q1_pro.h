@@ -24,7 +24,7 @@
 #define ___ KC_NO
 
 #ifdef VIA_ENABLE
-#    define USER_START USER00
+#    define USER_START QK_KB_0
 #else
 #    define USER_START SAFE_RANGE
 #endif
@@ -35,8 +35,6 @@ enum {
     KC_ROPTN,
     KC_LCMMD,
     KC_RCMMD,
-    KC_MCTL,
-    KC_LNPD,
     KC_TASK,
     KC_FILE,
     KC_SNAP,
@@ -55,6 +53,3 @@ enum {
 #endif
 	NEW_SAFE_RANGE
 };
-
-
-
