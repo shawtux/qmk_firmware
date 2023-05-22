@@ -10,4 +10,6 @@ CUSTOM_MATRIX = lite
 
 SRC += matrix.c
 
+include keyboards/keychron/bluetooth/bluetooth.mk
+
 DEFAULT_FOLDER = keychron/q8_pro/ansi_encoder
