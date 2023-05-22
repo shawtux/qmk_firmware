@@ -20,6 +20,8 @@
 #define HC595_SHCP A1
 #define HC595_DS A7
 
+#define DIRECT_COL_NUM 0
+
 pin_t row_pins[MATRIX_ROWS] = MATRIX_ROW_PINS;
 pin_t col_pins[MATRIX_COLS] = MATRIX_COL_PINS;
 
@@ -47,10 +49,10 @@ static void HC595_output(uint32_t data, bool bit) {
         } else {
             writePinLow(HC595_DS);
         }
+        HC595_delay(n);
         writePinHigh(HC595_SHCP);
         HC595_delay(n);
         writePinLow(HC595_SHCP);
-        HC595_delay(n);
         if (bit) {
             break;
         } else {
@@ -60,17 +62,15 @@ static void HC595_output(uint32_t data, bool bit) {
     writePinHigh(HC595_STCP);
     HC595_delay(n);
     writePinLow(HC595_STCP);
-    HC595_delay(n);
 }
 
 static void select_col(uint8_t col) {
-    if (col == 0) {
+    if (col == DIRECT_COL_NUM) {
         HC595_output(0x00, 1);
     }
 }
 
-static void unselect_col(uint8_t col) {
-    (void)col;
+static void unselect_col(void) {
     HC595_output(0X01, 1);
 }
 
@@ -87,10 +87,6 @@ static void matrix_read_rows_on_col(matrix_row_t current_matrix[], uint8_t curre
 
     // Select col
     select_col(current_col); // select col
-    // if (!select_col(current_col)) { // select col
-    //     return;                     // skip NO_PIN col
-    // }
-
     matrix_output_select_delay();
 
     // For each row...
@@ -107,7 +103,7 @@ static void matrix_read_rows_on_col(matrix_row_t current_matrix[], uint8_t curre
     }
 
     // Unselect col
-    unselect_col(current_col);
+    unselect_col();
     matrix_output_unselect_delay(current_col, key_pressed); // wait for all Row signals to go HIGH
 }
 

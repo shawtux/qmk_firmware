@@ -119,7 +119,7 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
             break;
         case BAT_LVL:
             if (get_transport() == TRANSPORT_BLUETOOTH && !usb_power_connected()) {
-                bat_level_animation_start(battery_get_percentage());
+                bat_level_animiation_start(battery_get_percentage());
             }
             break;
 #endif
@@ -134,7 +134,7 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
 
 #if defined(ENCODER_ENABLE) && defined(PAL_USE_CALLBACKS)
 static void encoder_pad_cb(void *param) {
-    encoder_interrupt_read((uint32_t)param & 0XFF);
+    encoder_inerrupt_read((uint32_t)param & 0XFF);
 }
 #endif
 
