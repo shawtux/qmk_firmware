@@ -1,1 +1,1 @@
-ENCODER_MAP = yes
+ENCODER_MAP_ENABLE = yes
