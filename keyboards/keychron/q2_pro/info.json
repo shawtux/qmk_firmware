@@ -59,9 +59,6 @@
             "solid_splash": true
         }
     },
-    "bluetooth": {
-        "driver": "custom"
-    },
     "layouts": {
         "LAYOUT_ansi_knob_67": {
             "layout": [
