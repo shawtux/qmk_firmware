@@ -26,9 +26,6 @@
         "cols": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
         "custom_lite": true 
     },
-    "bluetooth": {
-        "driver": "custom"
-    },
     "layouts": {
         "LAYOUT_ansi_68": {
             "layout": [
