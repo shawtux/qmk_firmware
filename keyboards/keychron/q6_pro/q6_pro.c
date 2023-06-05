@@ -87,6 +87,9 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
             }
             return false; // Skip all further processing of this key)
         case KC_TASK:
+            if (record->event.pressed) {
+                ckbt51_factory_reset();
+            }
         case KC_FILE:
         case KC_SNAP:
         case KC_CTANA:
@@ -177,11 +180,10 @@ void keyboard_post_init_kb(void) {
 static void ckbt51_param_init(void);
 
 void matrix_scan_kb(void) {
-    if (factory_timer_buffer && timer_elapsed32(factory_timer_buffer) > 20000) {
+    if (factory_timer_buffer && timer_elapsed32(factory_timer_buffer) > 2000) {
         factory_timer_buffer = 0;
         if (bt_factory_reset) {
             bt_factory_reset = false;
-            ckbt51_param_init();
             palWriteLine(CKBT51_RESET_PIN, PAL_LOW);
             wait_ms(5);
             palWriteLine(CKBT51_RESET_PIN, PAL_HIGH);
@@ -214,7 +216,6 @@ static void ckbt51_param_init(void) {
     /* Set bluetooth device name */
     // ckbt51_set_local_name(STR(PRODUCT));
     ckbt51_set_local_name(PRODUCT);
-    wait_ms(10);
     /* Set bluetooth parameters */
     module_param_t param = {.event_mode             = 0x02,
                             .connected_idle_timeout = 7200,
@@ -230,6 +231,7 @@ static void ckbt51_param_init(void) {
 
 void bluetooth_enter_disconnected_kb(uint8_t host_idx) {
     if (bt_factory_reset) {
+        ckbt51_param_init();
         factory_timer_buffer = timer_read32();
     }
 
