@@ -151,6 +151,9 @@ void keyboard_post_init_kb(void) {
     palSetLineMode(CKBT51_RESET_PIN, PAL_MODE_OUTPUT_PUSHPULL);
     palWriteLine(CKBT51_RESET_PIN, PAL_HIGH);
 
+    palSetLineMode(H3, PAL_MODE_OUTPUT_PUSHPULL);
+    palWriteLine(H3, PAL_LOW);
+
     /* IMPORTANT: DO NOT enable internal pull-up resistor
      * as there is an external pull-down resistor.
      */
