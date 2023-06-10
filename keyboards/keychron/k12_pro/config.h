@@ -20,12 +20,8 @@
 #define RGB_DISABLE_WHEN_USB_SUSPENDED
 #define LED_DISABLE_WHEN_USB_SUSPENDED
 
-/* Set 0 if debouncing isn't needed */
-#define DEBOUNCE 5
-
 /* DIP switch for Mac/win OS switch */
-#define DIP_SWITCH_PINS \
-    { A8 }
+#define DIP_SWITCH_PINS { A8 }
 
 /* Caps lock LED Pin */
 #define LED_CAPS_LOCK_PIN A0

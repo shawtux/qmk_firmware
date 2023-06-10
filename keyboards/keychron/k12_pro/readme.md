@@ -1,12 +1,12 @@
 # Keychron K12 Pro
 
-![Keychron K6 Pro]()
+![Keychron K12 Pro](https://i.imgur.com/1nFRfJs.jpg)
 
 A customizable 60% keyboard.
 
 * Keyboard Maintainer: [Keychron](https://github.com/keychron)
 * Hardware Supported: Keychron K12 Pro
-* Hardware Availability:
+* Hardware Availability: [Keychron K12 Pro QMK/VIA Wireless Mechanical Keyboard](<https://www.keychron.com/products/keychron-k12-pro-qmk-via-wireless-mechanical-keyboard>)
 
 Make example for this keyboard (after setting up your build environment):
 
