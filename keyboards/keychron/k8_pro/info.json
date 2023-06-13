@@ -24,6 +24,7 @@
     "matrix_pins": {
         "rows": ["B5", "B4", "B3", "A15", "A14", "A13"],
         "cols": ["B0", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        "custom": true,
         "custom_lite": true
     },
     "layouts": {
