@@ -1,4 +1,4 @@
-/* Copyright 2022 @ Keychron (https://www.keychron.com)
+/* Copyright 2023 @ Keychron (https://www.keychron.com)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,7 +21,8 @@
 #define LED_DISABLE_WHEN_USB_SUSPENDED
 
 /* DIP switch for Mac/win OS switch */
-#define DIP_SWITCH_PINS { A8 }
+#define DIP_SWITCH_PINS \
+    { A8 }
 
 /* Caps lock LED Pin */
 #define LED_CAPS_LOCK_PIN A0
@@ -74,15 +75,18 @@
 #    define BLUETOOTH_NKRO_ENABLE
 
 /* Raw hid command for factory test and bluetooth DFU */
-#   define RAW_HID_CMD 0xAA ... 0xAB
+#    define RAW_HID_CMD 0xAA ... 0xAB
 #else
 /* Raw hid command for factory test */
-#   define RAW_HID_CMD 0xAB
+#    define RAW_HID_CMD 0xAB
 #endif
 
 /* Emulated EEPROM configuration */
 #define FEE_DENSITY_BYTES FEE_PAGE_SIZE
-#define DYNAMIC_KEYMAP_EEPROM_MAX_ADDR  2047
+#define DYNAMIC_KEYMAP_EEPROM_MAX_ADDR 2047
+
+/* Old default behavior of mod-taps */
+#define HOLD_ON_OTHER_KEY_PRESS
 
 /* Factory test keys */
 #define FN_KEY1 MO(4)
