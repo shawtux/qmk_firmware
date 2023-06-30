@@ -17,7 +17,6 @@
         "nkro": true,
         "rgb_matrix": true,
         "dip_switch": true,
-        "bluetooth": false,
         "encoder": true,
         "raw": true
     },
@@ -51,6 +50,8 @@
         "cols": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
         "rows": ["B4", "B3", "A15", "A14", "A13"],
         "custom": true,
+        "custom_lite": true
+       "custom": true,
         "custom_lite": true
     },
     "diode_direction": "ROW2COL",
