@@ -34,8 +34,9 @@
 /* Turn off backllit if brightness value is low */
 #    define RGB_MATRIX_BRIGHTNESS_TURN_OFF_VAL 48
 
+/* Indication led */
 #    define CAPS_LOCK_INDEX 29
-#    define LOW_BAT_IND_INDEX 60
+#    define LOW_BAT_IND_INDEX 61
 
 // RGB Matrix Animation modes. Explicitly enabled
 // For full list of effects, see:
@@ -45,6 +46,5 @@
 
 /* Set LED driver current */
 #    define CKLED2001_CURRENT_TUNE \
-        { 0x28, 0x28, 0x28, 0x28, 0x28, 0x28, 0x28, 0x28, 0x28, 0x28, 0x28, 0x28 }
-
+        { 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40 }
 #endif

@@ -4,7 +4,7 @@
     	"device_version": "1.0.0"
     },
     "layouts": {
-        "LAYOUT": {
+        "LAYOUT_69_ansi": {
             "layout": [
                 {"matrix":[0, 0], "x":0.75, "y":0.25},
                 {"matrix":[0, 1], "x":1.75, "y":0.25},
