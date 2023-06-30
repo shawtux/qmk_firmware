@@ -51,8 +51,6 @@
         "rows": ["B4", "B3", "A15", "A14", "A13"],
         "custom": true,
         "custom_lite": true
-       "custom": true,
-        "custom_lite": true
     },
     "diode_direction": "ROW2COL",
     "encoder": {
