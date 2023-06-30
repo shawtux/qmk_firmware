@@ -11,10 +11,12 @@ A customizable 65% Alice keyboard.
 Make example for this keyboard (after setting up your build environment):
 
     make keychron/q8_pro/ansi_encoder:default
+    make keychron/q8_pro/iso_encoder:default
 
 Flashing example for this keyboard:
 
     make keychron/q8_pro/ansi_encoder:default:flash
+    make keychron/q8_pro/iso_encoder:default:flash
 
 **Reset Key**: Connect the USB cable, toggle mode switch to "Off", hold down the *Esc* key or reset button underneath space bar, then toggle then switch to "Cable".
 
