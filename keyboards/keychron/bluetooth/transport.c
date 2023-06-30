@@ -183,9 +183,7 @@ void usb_remote_wakeup(void) {
                 usb_wakeup(&USB_DRIVER);
             }
         }
-        // palWriteLine(H3, PAL_HIGH);
         wait_ms(500);
-        // palWriteLine(H3, PAL_LOW);
         /* Woken up */
         // variables has been already cleared by the wakeup hook
         send_keyboard_report();
