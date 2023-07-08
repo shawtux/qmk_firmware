@@ -8,8 +8,6 @@ A customizable 80% TKL keyboard.
 * Hardware Supported: Keychron Q3 Pro
 * Hardware Availability: [Keychron Q3 Pro QMK/VIA Wireless Custom Mechanical Keyboard](https://www.keychron.com/products/keychron-q3-pro-qmk-via-wireless-custom-mechanical-keyboard)
 
-Q3 Pro SE marked with v1 and Q3 Pro marked with v2.
-
 Make example for this keyboard (after setting up your build environment):
 
     make keychron/q3_pro/ansi_encoder_v1:default
