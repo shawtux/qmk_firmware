@@ -17,16 +17,17 @@
 #pragma once
 
 #ifdef RGB_MATRIX_ENABLE
-/* RGB Matrix driver configuration */
+/* RGB Matrix Driver Configuration */
 #    define DRIVER_COUNT 2
-
 #    define DRIVER_ADDR_1 0b1110111
 #    define DRIVER_ADDR_2 0b1110100
+
+/* RGB Matrix Configuration */
 #    define DRIVER_1_LED_COUNT 47
 #    define DRIVER_2_LED_COUNT 44
 #    define RGB_MATRIX_LED_COUNT (DRIVER_1_LED_COUNT + DRIVER_2_LED_COUNT)
 
-/* Scan phase of led driver set as MSKPHASE_9CHANNEL(defined as 0x03 in CKLED2001.h) */
+/* Use the first 9 channels of led driver */
 #    define PHASE_CHANNEL MSKPHASE_9CHANNEL
 
 /* Set LED driver current */
@@ -38,6 +39,7 @@
 
 /* Allow shutdown of led driver to save power */
 #    define RGB_MATRIX_DRIVER_SHUTDOWN_ENABLE
+
 /* Turn off backlight on low brightness to save power */
 #    define RGB_MATRIX_BRIGHTNESS_TURN_OFF_VAL 32
 
@@ -47,7 +49,10 @@
  * For full list of effects, see:
  * https://docs.qmk.fm/#/feature_rgb_matrix?id=rgb-matrix-effects
  */
-
 #    define RGB_MATRIX_KEYPRESSES
 #    define RGB_MATRIX_FRAMEBUFFER_EFFECTS
 #endif // RGB_MATRIX_ENABLE
+
+/* Specifed (0,1) which programmed as "ESC" key on this keyboard as bootmagic key */
+#define BOOTMAGIC_LITE_ROW 0
+#define BOOTMAGIC_LITE_COLUMN 1
