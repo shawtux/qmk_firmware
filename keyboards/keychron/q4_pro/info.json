@@ -16,7 +16,6 @@
         "extrakey": true,
         "mousekey": true,
         "nkro": true,
-        "bluetooth": false,
         "rgb_matrix": true,
         "raw": true
     },
