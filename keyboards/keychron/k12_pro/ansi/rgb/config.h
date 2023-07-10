@@ -22,8 +22,7 @@
 #    define DRIVER_ADDR_1 0b1110100
 #    define RGB_MATRIX_LED_COUNT 61
 
-/* Set to infinit, which is use in USB mode by default
- */
+/* Set to infinit, which is use in USB mode by default */
 #    define RGB_MATRIX_TIMEOUT RGB_MATRIX_TIMEOUT_INFINITE
 
 /* Allow shutdown of led driver to save power */
