@@ -10,9 +10,9 @@ A customizable 80% TKL keyboard.
 
 Make example for this keyboard (after setting up your build environment):
 
-    make keychron/q3_pro/ansi_encoder_v1:default
-    make keychron/q3_pro/iso_encoder_v1:default
-    make keychron/q3_pro/ansi_encoder_v2:default
+    make keychron/q3_pro/ansi_encoder_se:default
+    make keychron/q3_pro/iso_encoder_se:default
+    make keychron/q3_pro/ansi_encoder:default
 
 Flashing example for this keyboard:
 
