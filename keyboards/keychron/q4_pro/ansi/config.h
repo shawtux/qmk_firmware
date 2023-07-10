@@ -20,8 +20,7 @@
 /* RGB Matrix Driver Configuration */
 #    define DRIVER_COUNT 1
 #    define DRIVER_ADDR_1 0b1110100
-#    define DRIVER_1_LED_TOTAL 61
-#    define RGB_MATRIX_LED_COUNT DRIVER_1_LED_TOTAL
+#    define RGB_MATRIX_LED_COUNT 61
 
 /* Set to infinit, which is use in USB mode by default */
 #    define RGB_MATRIX_TIMEOUT RGB_MATRIX_TIMEOUT_INFINITE
