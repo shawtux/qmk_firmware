@@ -27,7 +27,7 @@
 
 /* RGB Matrix Configuration */
 #    define DRIVER_1_LED_TOTAL 29
-#    define DRIVER_2_LED_TOTAL 37
+#    define DRIVER_2_LED_TOTAL 38
 #    define RGB_MATRIX_LED_COUNT (DRIVER_1_LED_TOTAL + DRIVER_2_LED_TOTAL)
 
 /* Set to infinit, which is use in USB mode by default */
@@ -40,8 +40,8 @@
 #    define RGB_MATRIX_BRIGHTNESS_TURN_OFF_VAL 48
 
 /* Indication led index */
-#    define CAPS_LOCK_INDEX 29
-#    define LOW_BAT_IND_INDEX 59
+#    define CAPS_LOCK_INDEX 28
+#    define LOW_BAT_IND_INDEX 60
 
 #    define RGB_MATRIX_KEYPRESSES
 #    define RGB_MATRIX_FRAMEBUFFER_EFFECTS
