@@ -45,10 +45,6 @@
 
 #    define LOW_BAT_IND_INDEX 83
 
-/* RGB Matrix Animation modes. Explicitly enabled
- * For full list of effects, see:
- * https://docs.qmk.fm/#/feature_rgb_matrix?id=rgb-matrix-effects
- */
 #    define RGB_MATRIX_KEYPRESSES
 #    define RGB_MATRIX_FRAMEBUFFER_EFFECTS
 #endif // RGB_MATRIX_ENABLE
