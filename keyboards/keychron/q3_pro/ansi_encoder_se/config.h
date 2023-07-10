@@ -24,8 +24,15 @@
 
 /* RGB Matrix Configuration */
 #    define DRIVER_1_LED_COUNT 47
-#    define DRIVER_2_LED_COUNT 40
+#    define DRIVER_2_LED_COUNT 44
 #    define RGB_MATRIX_LED_COUNT (DRIVER_1_LED_COUNT + DRIVER_2_LED_COUNT)
+
+/* Use the first 9 channels of led driver */
+#    define PHASE_CHANNEL MSKPHASE_9CHANNEL
+
+/* Set LED driver current */
+#    define CKLED2001_CURRENT_TUNE \
+        { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 }
 
 /* Set to infinit, which is use in USB mode by default */
 #    define RGB_MATRIX_TIMEOUT RGB_MATRIX_TIMEOUT_INFINITE
@@ -36,17 +43,12 @@
 /* Turn off backlight on low brightness to save power */
 #    define RGB_MATRIX_BRIGHTNESS_TURN_OFF_VAL 32
 
-/* Indication led */
-#    define CAPS_LOCK_INDEX 50
-#    define LOW_BAT_IND_INDEX 79
+#    define LOW_BAT_IND_INDEX 83
 
-#    define RGB_MATRIX_FRAMEBUFFER_EFFECTS
 #    define RGB_MATRIX_KEYPRESSES
+#    define RGB_MATRIX_FRAMEBUFFER_EFFECTS
+#endif // RGB_MATRIX_ENABLE
 
-/* Use the first 9 channels of led driver */
-#    define PHASE_CHANNEL MSKPHASE_9CHANNEL
-
-/* Set LED driver current */
-#    define CKLED2001_CURRENT_TUNE \
-        { 0x28, 0x28, 0x28, 0x28, 0x28, 0x28, 0x28, 0x28, 0x28, 0x28, 0x28, 0x28 }
-#endif
+/* Specifed (0,1) which programmed as "ESC" key on this keyboard as bootmagic key */
+#define BOOTMAGIC_LITE_ROW 0
+#define BOOTMAGIC_LITE_COLUMN 1
