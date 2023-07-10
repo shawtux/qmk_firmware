@@ -1,7 +1,7 @@
 {
     "usb": {
-        "pid": "0x0213",
-        "device_version": "1.0.1"
+        "pid": "0x0214",
+        "device_version": "1.0.0"
     },
     "features": {
         "led_matrix": true
@@ -75,7 +75,6 @@
             {"matrix":[2, 10], "flags":4, "x":137, "y":26},
             {"matrix":[2, 11], "flags":4, "x":150, "y":26},
             {"matrix":[2, 12], "flags":4, "x":163, "y":26},
-            {"matrix":[2, 13], "flags":1, "x":180, "y":33},
             {"matrix":[2, 14], "flags":1, "x":197, "y":26},
             {"matrix":[2, 15], "flags":1, "x":210, "y":26},
             {"matrix":[2, 16], "flags":1, "x":224, "y":26},
@@ -92,9 +91,11 @@
             {"matrix":[3, 9],  "flags":4, "x":127, "y":38},
             {"matrix":[3, 10], "flags":4, "x":140, "y":38},
             {"matrix":[3, 11], "flags":4, "x":153, "y":38},
-            {"matrix":[3, 13], "flags":1, "x":175, "y":38},
+            {"matrix":[3, 13], "flags":1, "x":167, "y":38},
+            {"matrix":[2, 13], "flags":1, "x":182, "y":33},
 
             {"matrix":[4, 0],  "flags":1, "x":8,   "y":51},
+            {"matrix":[4, 1],  "flags":1, "x":16,  "y":51},
             {"matrix":[4, 2],  "flags":4, "x":29,  "y":51},
             {"matrix":[4, 3],  "flags":4, "x":42,  "y":51},
             {"matrix":[4, 4],  "flags":4, "x":55,  "y":51},
