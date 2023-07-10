@@ -36,10 +36,7 @@
 #    define CAPS_LOCK_INDEX 28
 #    define LOW_BAT_IND_INDEX 56
 
-// LED Matrix Animation modes. Explicitly enabled
-// For full list of effects, see:
-// https://docs.qmk.fm/#/feature_led_matrix?id=led-matrix-effects
-// #if defined(LED_MATRIX_KEYPRESSES) || defined(LED_MATRIX_KEYRELEASES)
+/* Enable Reactive Animation */
 #    define LED_MATRIX_KEYPRESSES
 #    define LED_MATRIX_KEYRELEASES
 
