@@ -1,6 +1,6 @@
 # Keychron K4 Pro
 
-![Keychron K4 Pro](https://drive.google.com/file/d/1zkIRtf7GCvkOeq1oT07D9WXIPmoieS8p/view?usp=share_link)
+![Keychron K4 Pro](https://github.com/Keychron/ProductImage/blob/main/K_Pro/k4_pro.jpg?raw=true)
 
 A customizable 100 keys keyboard.
 

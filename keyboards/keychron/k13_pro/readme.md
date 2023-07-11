@@ -1,6 +1,6 @@
 # Keychron K13 Pro
 
-![Keychron K13 Pro](https://drive.google.com/file/d/17S4Afhfs4DmwBcnkvo94ipLIVgL3rsy7/view?usp=share_link)
+![Keychron K13 Pro](https://github.com/Keychron/ProductImage/blob/main/K_Pro/k13_pro.jpg?raw=true)
 
 A customizable 80% TKL keyboard.
 
