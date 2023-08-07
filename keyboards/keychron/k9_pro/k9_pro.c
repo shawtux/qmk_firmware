@@ -141,7 +141,6 @@ void keyboard_post_init_kb(void) {
     dip_switch_read(true);
 
 #ifdef KC_BLUETOOTH_ENABLE
-    /* Currently we don't use this reset pin */
     palSetLineMode(CKBT51_RESET_PIN, PAL_MODE_OUTPUT_PUSHPULL);
     palWriteLine(CKBT51_RESET_PIN, PAL_HIGH);
 
