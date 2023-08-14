@@ -142,7 +142,6 @@ void keyboard_post_init_kb(void) {
 
 #ifdef KC_BLUETOOTH_ENABLE
     /* Currently we don't use this reset pin */
-    // palSetLineMode(CKBT51_RESET_PIN, PAL_MODE_UNCONNECTED);
     palSetLineMode(CKBT51_RESET_PIN, PAL_MODE_OUTPUT_PUSHPULL);
     palWriteLine(CKBT51_RESET_PIN, PAL_HIGH);
 
@@ -195,7 +194,6 @@ void matrix_scan_kb(void) {
 #ifdef KC_BLUETOOTH_ENABLE
 static void ckbt51_param_init(void) {
     /* Set bluetooth device name */
-    // ckbt51_set_local_name(STR(PRODUCT));
     ckbt51_set_local_name(PRODUCT);
     wait_ms(10);
     /* Set bluetooth parameters */
@@ -209,6 +207,7 @@ static void ckbt51_param_init(void) {
                             .verndor_id             = 0, // Must be 0x3434
                             .product_id             = PRODUCT_ID};
     ckbt51_set_param(&param);
+    wait_ms(10);
 }
 
 void bluetooth_enter_disconnected_kb(uint8_t host_idx) {
@@ -309,3 +308,9 @@ void raw_hid_receive(uint8_t *data, uint8_t length) {
     }
 }
 #endif
+
+void suspend_wakeup_init_kb(void) {
+    // code will run on keyboard wakeup
+    clear_keyboard();
+    send_keyboard_report();
+}

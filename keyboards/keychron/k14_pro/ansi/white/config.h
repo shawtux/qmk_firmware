@@ -17,11 +17,12 @@
 #pragma once
 
 #ifdef LED_MATRIX_ENABLE
-/* LED matrix driver configuration */
+/* LED Matrix Driver Configuration */
 #    define DRIVER_COUNT 1
 #    define DRIVER_ADDR_1 0b1110100
-#    define DRIVER_1_LED_COUNT 72
-#    define LED_MATRIX_LED_COUNT DRIVER_1_LED_COUNT
+
+/* LED Matrix Configuration */
+#    define LED_MATRIX_LED_COUNT 72
 
 /* Set to infinit, which is use in USB mode by default */
 #    define LED_MATRIX_TIMEOUT LED_MATRIX_TIMEOUT_INFINITE
