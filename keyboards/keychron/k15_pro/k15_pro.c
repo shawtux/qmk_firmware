@@ -151,7 +151,7 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
     return true;
 }
 
-#if defined(ENCODER_ENABLE)
+#if defined(KC_BLUETOOTH_ENABLE) && defined(ENCODER_ENABLE)
 static void encoder_pad_cb(void *param) {
     encoder_inerrupt_read((uint32_t)param & 0XFF);
 }
