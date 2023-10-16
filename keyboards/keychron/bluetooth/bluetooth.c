@@ -291,7 +291,7 @@ uint8_t bluetooth_keyboard_leds(void) {
 extern keymap_config_t keymap_config;
 
 void bluetooth_send_keyboard(report_keyboard_t *report) {
-    if ((bt_state == BLUETOOTH_PARING && !pincodeEntry)) return;
+    if (bt_state == BLUETOOTH_PARING && !pincodeEntry) return;
 
     if (bt_state == BLUETOOTH_CONNECTED || (bt_state == BLUETOOTH_PARING && pincodeEntry)) {
 #if defined(NKRO_ENABLE)
