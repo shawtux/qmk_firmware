@@ -135,8 +135,8 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
     return true;
 }
 
-#if defined(KC_BLUETOOTH_ENABLE) && defined(ENCODER_ENBALE)
-static void encoder0_pad_cb(void *param) {
+#if defined(ENCODER_ENABLE)
+static void encoder_pad_cb(void *param) {
     encoder_inerrupt_read((uint32_t)param & 0xFF);
 }
 #endif
@@ -156,16 +156,16 @@ void keyboard_post_init_kb(void) {
 
     ckbt51_init(false);
     bluetooth_init();
-
 #endif
-#ifdef ENCODER_ENBALE
+
+#ifdef ENCODER_ENABLE
     pin_t encoders_pad_a[NUM_ENCODERS] = ENCODERS_PAD_A;
     pin_t encoders_pad_b[NUM_ENCODERS] = ENCODERS_PAD_B;
-    for (uint8_t i = 0; i < NUM_ENCODERS; i++) {
+    for (uint32_t i = 0; i < NUM_ENCODERS; i++) {
         palEnableLineEvent(encoders_pad_a[i], PAL_EVENT_MODE_BOTH_EDGES);
         palEnableLineEvent(encoders_pad_b[i], PAL_EVENT_MODE_BOTH_EDGES);
-        palSetLineCallback(encoders_pad_a[i], encoder_pad_cb, &i);
-        palSetLineCallback(encoders_pad_b[i], encoder_pad_cb, &i);
+        palSetLineCallback(encoders_pad_a[i], encoder_pad_cb, (void *)i);
+        palSetLineCallback(encoders_pad_b[i], encoder_pad_cb, (void *)i);
     }
 #endif
 
