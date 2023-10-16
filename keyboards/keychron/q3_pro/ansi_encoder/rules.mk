@@ -1,1 +1,1 @@
-SRC += matrix_v2.c
+include keyboards/keychron/common/common.mk
