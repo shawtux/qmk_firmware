@@ -291,14 +291,6 @@ uint8_t bluetooth_keyboard_leds(void) {
 extern keymap_config_t keymap_config;
 
 void bluetooth_send_keyboard(report_keyboard_t *report) {
-    if (battery_is_critical_low()) {
-        report_keyboard_t empty_report;
-        memset(&empty_report, 0, sizeof(empty_report));
-        if (memcmp(keyboard_report, &empty_report, sizeof(report_keyboard_t)) != 0) {
-            return;
-        }
-    }
-
     if (bt_state == BLUETOOTH_PARING && !pincodeEntry) return;
 
     if (bt_state == BLUETOOTH_CONNECTED || (bt_state == BLUETOOTH_PARING && pincodeEntry)) {
@@ -403,7 +395,7 @@ void bluetooth_low_battery_shutdown(void) {
     indicator_battery_low_backlit_enable(false);
 #endif
     clear_keyboard();
-    wait_ms(50);
+    send_keyboard_report();
 
     bluetooth_disconnect();
 }
