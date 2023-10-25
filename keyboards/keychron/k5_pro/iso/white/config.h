@@ -16,37 +16,38 @@
 
 #pragma once
 
-#ifdef RGB_MATRIX_ENABLE
-/* RGB Matrix Driver Configuration */
-#    define DRIVER_COUNT 2
-#    define DRIVER_ADDR_1 0b1110111
-#    define DRIVER_ADDR_2 0b1110100
+#ifdef LED_MATRIX_ENABLE
+/* LED Matrix Driver Configuration */
+#    define DRIVER_COUNT 1
+#    define DRIVER_ADDR_1 0b1110100
 
-/* RGB Matrix Configuration */
-#    define DRIVER_1_LED_TOTAL 58
-#    define DRIVER_2_LED_TOTAL 50
-#    define RGB_MATRIX_LED_COUNT (DRIVER_1_LED_TOTAL + DRIVER_2_LED_TOTAL)
+/* LED Matrix Configuration */
+#    define LED_MATRIX_LED_COUNT 109
 
 /* Set to infinit, which is use in USB mode by default */
-#    define RGB_MATRIX_TIMEOUT RGB_MATRIX_TIMEOUT_INFINITE
+#    define LED_MATRIX_TIMEOUT LED_MATRIX_TIMEOUT_INFINITE
 
 /* Allow to shutdown driver to save power */
-#    define RGB_MATRIX_DRIVER_SHUTDOWN_ENABLE
+#    define LED_MATRIX_DRIVER_SHUTDOWN_ENABLE
 
 /* Turn off backllit if brightness value is low */
-#    define RGB_MATRIX_BRIGHTNESS_TURN_OFF_VAL 48
+#    define LED_MATRIX_BRIGHTNESS_TURN_OFF_VAL 48
 
 /* Indication led */
 #    define NUM_LOCK_INDEX 37    // NumLock
-#    define LOW_BAT_IND_INDEX 98 // Space
+#    define LOW_BAT_IND_INDEX 99 // Space
 
-// RGB Matrix Animation modes. Explicitly enabled
+// LED Matrix Animation modes. Explicitly enabled
 // For full list of effects, see:
-// https://docs.qmk.fm/#/feature_rgb_matrix?id=rgb-matrix-effects
-#    define RGB_MATRIX_KEYPRESSES
-#    define RGB_MATRIX_FRAMEBUFFER_EFFECTS
+// https://docs.qmk.fm/#/feature_led_matrix?id=led-matrix-effects
+// #if defined(LED_MATRIX_KEYPRESSES) || defined(LED_MATRIX_KEYRELEASES)
+#    define LED_MATRIX_KEYPRESSES
+#    define LED_MATRIX_KEYRELEASES
+
+/* Use first 9 channels of LED driver */
+#    define PHASE_CHANNEL MSKPHASE_8CHANNEL
 
 /* Set LED driver current */
 #    define CKLED2001_CURRENT_TUNE \
-        { 0x14, 0x14, 0x14, 0x14, 0x14, 0x14, 0x14, 0x14, 0x14, 0x14, 0x14, 0x14 }
+        { 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30 }
 #endif
