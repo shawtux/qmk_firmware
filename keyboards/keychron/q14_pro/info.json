@@ -50,7 +50,7 @@
         "matrix": [0, 4]
     },
     "matrix_pins": {
-        "cols": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ],
+        "cols": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
         "rows": ["B5", "B4", "B3", "A15", "A14", "A13"],
         "custom": true,
         "custom_lite": true
