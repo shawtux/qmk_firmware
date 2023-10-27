@@ -10,8 +10,8 @@ A customizable 75% ergonomic keyboard.
 
 Make example for this keyboard (after setting up your build environment):
 
-    make keychron/k5_pro/ansi_encoder/rgb:default
-    make keychron/k5_pro/ansi_encoder/white:default
+    make keychron/k15_pro/ansi_encoder/rgb:default
+    make keychron/k15_pro/ansi_encoder/white:default
 
 Flashing example for this keyboard:
 
