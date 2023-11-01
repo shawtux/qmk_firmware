@@ -25,6 +25,8 @@
 #ifdef KC_BLUETOOTH_ENABLE
 /* Hardware configuration */
 #    define USB_BT_MODE_SELECT_PIN C15
+
+#    define CKBT51_RESET_PIN A9
 #    define CKBT51_INT_INPUT_PIN A5
 #    define BLUETOOTH_INT_INPUT_PIN A6
 

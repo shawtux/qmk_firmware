@@ -35,8 +35,8 @@ typedef struct PACKED {
 } key_combination_t;
 
 static uint32_t factory_timer_buffer = 0;
-static uint32_t siri_timer_buffer = 0;
-static uint8_t  mac_keycode[4]    = {KC_LOPT, KC_ROPT, KC_LCMD, KC_RCMD};
+static uint32_t siri_timer_buffer    = 0;
+static uint8_t  mac_keycode[4]       = {KC_LOPT, KC_ROPT, KC_LCMD, KC_RCMD};
 
 key_combination_t key_comb_list[4] = {
     {2, {KC_LWIN, KC_TAB}},        // Task (win)
@@ -130,8 +130,8 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
     return true;
 }
 
-#if defined(KC_BLUETOOTH_ENABLE) && defined(ENCODER_ENABLE)
-static void encoder_pad_cb(void *param) {
+#if defined(ENCODER_ENABLE)
+static void encoder0_pad_cb(void *param) {
     encoder_inerrupt_read((uint32_t)param & 0XFF);
 }
 #endif
@@ -176,7 +176,7 @@ void keyboard_post_init_kb(void) {
     palEnableLineEvent(encoders_pad_b[0], PAL_EVENT_MODE_BOTH_EDGES);
     palSetLineCallback(encoders_pad_a[0], encoder0_pad_cb, NULL);
     palSetLineCallback(encoders_pad_b[0], encoder0_pad_cb, NULL);
-#endif
+#    endif
 #endif
 
     keyboard_post_init_user();

@@ -53,18 +53,14 @@
 #    define RGB_MATRIX_KEYPRESSES
 
 #    ifdef KC_BLUETOOTH_ENABLE
-#            define HOST_DEVICES_COUNT 3
-#            define HOST_LED_MATRIX_LIST \
-                { 17, 18, 19 }
-#            define BAT_LEVEL_LED_LIST \
-                { 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 }
+#        define HOST_DEVICES_COUNT 3
+#        define HOST_LED_MATRIX_LIST \
+            { 17, 18, 19 }
+#        define BAT_LEVEL_LED_LIST \
+            { 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 }
 #    endif
 #endif // RGB_MATRIX_ENABLE
 
 /* Specifed (0,1) which programmed as "ESC" key on this keyboard as bootmagic key */
 #define BOOTMAGIC_LITE_ROW 0
 #define BOOTMAGIC_LITE_COLUMN 1
-
-#ifdef KC_BLUETOOTH_ENABLE
-#    define BAT_LOW_LED_PIN_STATE
-#endif
