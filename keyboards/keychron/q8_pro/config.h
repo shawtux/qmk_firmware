@@ -20,7 +20,8 @@
 #define RGB_DISABLE_WHEN_USB_SUSPENDED
 
 /* DIP switch */
-#define DIP_SWITCH_PINS { A8 }
+#define DIP_SWITCH_PINS \
+    { A8 }
 
 /* Increase I2C speed to 1000 KHz */
 #define I2C1_TIMINGR_PRESC 0U
@@ -82,6 +83,7 @@
 #endif
 
 /* HC595 Driver configuretion */
+#define HC595_OFFSET_INDEX 1
 #define HC595_END_INDEX 14
 
 /* Factory test keys */
