@@ -91,9 +91,6 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
             }
             return false; // Skip all further processing of this key)
         case KC_TASK:
-            if (record->event.pressed) {
-                ckbt51_factory_reset();
-            }
         case KC_FILE:
         case KC_SNAP:
         case KC_CTANA:
